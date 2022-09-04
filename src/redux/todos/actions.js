@@ -1,4 +1,5 @@
 import {
+  LOADED,
   ADDED,
   ALLCOMPLETED,
   CLEARCOMPLETED,
@@ -6,6 +7,13 @@ import {
   DELETED,
   TOGGLED,
 } from "./actionTypes";
+
+export const loaded = (todo) => {
+  return {
+    type: LOADED,
+    payload: todo,
+  };
+};
 
 export const added = (todoText) => {
   return {
